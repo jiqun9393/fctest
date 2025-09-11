@@ -2,7 +2,7 @@ edition: 3.0.0 # 命令行YAML规范版本，遵循语义化版本（Semantic Ve
 name: hello-world-app # 项目名称
 access: default # 秘钥别名
 
-flow: # 全局执行流程
+flow: # 全局执行流程 test
   Command: # 流程作用的指令
     - [ResourceName] # 这一步骤运行的资源名称
 
