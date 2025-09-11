@@ -1,0 +1,24 @@
+edition: 3.0.0 # 命令行YAML规范版本，遵循语义化版本（Semantic Versioning）规范
+name: hello-world-app # 项目名称
+access: default # 秘钥别名
+
+flow: # 全局执行流程
+  Command: # 流程作用的指令
+    - [ResourceName] # 这一步骤运行的资源名称
+
+template: # 模板信息
+  TemplateName: # 模板名称
+    Key: Value
+
+vars: # [全局变量，提供给各个项目使用]
+  Key: Value
+
+validation: true # 是否开启资源属性值校验
+
+actions: globalActions # 自定义全局的执行逻辑
+
+resources: # 可以包括多个业务模块
+  ResourceName: # 资源名称
+    actions: projectActions # 自定义执行逻辑
+    component: componentName # 组件名称
+    props: componentProps # 组件的属性值
